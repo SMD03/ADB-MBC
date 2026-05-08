@@ -1,5 +1,5 @@
 ################################################################################
-###################ADB Final Project: Enzyme Kinetics Inhibitors################
+################## ADB Final Project: Enzyme Kinetics Inhibitors ###############
 ################################################################################
 
 
@@ -21,12 +21,11 @@ library(report)
 
 # Setting a Working Directory to later load the .csv file.
 
-setwd("~/Documents/MBC/1st_Year/1st Semester/Biological Big Data Analytics")
+setwd("~/Documents/MBC/1st_Year/1st Semester/Biological Big Data Analytics/ADB_Project")
 
 # or (How each group member set up their working directory in their computer)
 
-setwd("C:/Users/anaan/OneDrive - Universidade de Aveiro/
-      Attachments/Desktop/OneDrive - Universidade de Coimbra/ADB/Projeto")
+#setwd("C:/Users/anaan/OneDrive - Universidade de Aveiro/Attachments/Desktop/OneDrive - Universidade de Coimbra/ADB/Projeto")
 
 # Importing the data into RStudio
 
