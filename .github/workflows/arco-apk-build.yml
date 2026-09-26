@@ -1,7 +1,7 @@
 name: Build Arco APK
 on:
-  push:
-    branches: [ arco-apk-build-20260926 ]
+  pull_request:
+    branches: [ main ]
   workflow_dispatch:
 
 jobs:
