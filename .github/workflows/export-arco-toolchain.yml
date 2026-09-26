@@ -1,0 +1,22 @@
+name: Export Android Toolchain
+on:
+  push:
+    branches: [ main ]
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pack Android build tools
+        run: |
+          set -eux
+          SDK=/usr/local/lib/android/sdk
+          test -f "$SDK/platforms/android-35/android.jar"
+          if [ -d "$SDK/build-tools/35.0.1" ]; then BT="$SDK/build-tools/35.0.1"; else BT="$SDK/build-tools/35.0.0"; fi
+          mkdir -p /tmp/arco-toolchain/build-tools /tmp/arco-toolchain/platform
+          cp -a "$BT/." /tmp/arco-toolchain/build-tools/
+          cp "$SDK/platforms/android-35/android.jar" /tmp/arco-toolchain/platform/android.jar
+          printf '%s\n' "$BT" > /tmp/arco-toolchain/BUILD_TOOLS_SOURCE.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: arco-android-toolchain
+          path: /tmp/arco-toolchain
