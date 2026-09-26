@@ -1,1 +1,1 @@
-Temporary trigger for Arco APK build.
+Temporary trigger for Arco APK build — preinstalled SDK route.
